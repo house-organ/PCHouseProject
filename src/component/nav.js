@@ -1,6 +1,7 @@
 
 import React, { Component } from "react";
-import "./nav.scss";
+import "./nva.less"
+// import "antd/dist/antd.css";
 import logo from "src/pages/react-multi.png"
 export default class Nav extends Component {
 
@@ -12,7 +13,6 @@ export default class Nav extends Component {
 					<div className="nav-item"><a href= "/">Home</a></div>
 					<div className="nav-item"><a href= "/todo">Todo</a></div>
 					<div className="nav-item"><a href= "/about">about</a></div>
-					<div className="nav-item"><a href= "https://github.com/leinov/webpack-react-multi-page/">Github</a></div>
 				</div>
 				<div className="column is-2"></div>
 	    </div>

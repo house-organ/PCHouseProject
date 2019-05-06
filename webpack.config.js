@@ -17,6 +17,8 @@ const createHtml =require("./config/create-html");// html配置
 const getEntry = require("./config/get-entry");
 const entry = getEntry("./src/pages");
 const htmlArr = createHtml("./src/pages");
+// const lessRegex = /\.(less)$/;
+// const lessModuleRegex = /\.module\.(less)$/;
 
 //主配置
 module.exports = (env, argv) => ({
@@ -33,11 +35,18 @@ module.exports = (env, argv) => ({
 				use: {
 					loader:"babel-loader",
 					options:{
-						presets: [
+						presets:[
+							// [
 							"@babel/preset-env",
 							"@babel/preset-react",
 							{"plugins": ["@babel/plugin-proposal-class-properties"]} //这句很重要 不然箭头函数出错
-						], 
+						// ],
+							// ['import',{
+							// 	'libraryName':'antd',
+							// 	style:true
+							// }]
+						]
+
 					}
 				},
 			},
@@ -47,11 +56,12 @@ module.exports = (env, argv) => ({
 				exclude: /node_modules/,
 			},
 			{
-				test: /\.(scss|css)$/, //css打包 路径在plugins里
+				test: /\.(less|css)$/, //css打包 路径在plugins里
 				use: [
 					argv.mode == "development" ? { loader: "style-loader"} :MiniCssExtractPlugin.loader,
 					{ loader: "css-loader", options: { url: false, sourceMap: true } },
-					{ loader: "sass-loader", options: { sourceMap: true } }
+					// { loader: "sass-loader", options: { sourceMap: true } },
+					{ loader: "less-loader", options: { sourceMap: true } }
 				],
 				exclude: /node_modules/,
 			},
