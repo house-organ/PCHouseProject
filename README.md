@@ -69,3 +69,13 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+目录结构：<br />
+index 首页<br />
+newRoom 新房<br />
+seaViewRoom 海景房<br />
+villa 别墅<br />
+market 楼市<br />
+about 关于（联系）我们<br />
+userSystem 用户系统[登录、注册、找回]
