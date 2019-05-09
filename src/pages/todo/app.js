@@ -25,6 +25,13 @@ import {
 import Nav from "component/nav";
 
 class App extends React.Component {
+	state={
+		title:'55566'
+	}
+	componentWillMount() {
+		let title = this.state.title
+		console.log("title--------->",title)
+	}
 	constructor(props){
 		super(props);
 		this.state={}
@@ -72,7 +79,19 @@ class App extends React.Component {
 			<div>
 				<Nav />
 				<div className="main todo column is-8">
-					todo
+					<h1 className="title"> {utils.getDate("-")} todo list</h1>
+					<AddTodo 
+						onChange={this.onChange} 
+						onKeyDown={this.onKeyDown}
+					/>
+					<TodoList 
+						todoList = {this.props.todoList}
+						onToggleClick = {this.onToggleClick}
+						deleteTodo={this.deleteTodo}
+					/>
+					<Filter 
+						onFilterChange = {this.onFilterChange}
+					/>
 				</div>
 				<Footer />
 			</div>

@@ -10,7 +10,6 @@ var express = require("express");
 var app = express();
 var http = require("http");
 var port = "3118";
-// var port = "3100";
 //在浏览器中打开 下面执行
 const opn = require("opn");
 

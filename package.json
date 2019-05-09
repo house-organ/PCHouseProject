@@ -36,15 +36,15 @@
     "webpack-dev-server": "^3.1.9"
   },
   "dependencies": {
-    "antd": "^3.16.6",
+    "antd": "^3.17.0",
+    "axios": "^0.18.0",
     "bulma": "^0.7.1",
     "express": "^4.16.3",
-    "less": "2.7.3",
-    "less-loader": "^5.0.0",
     "opn": "^5.4.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^6.0.0",
+    "react-router-dom": "^5.0.0",
     "redux": "^4.0.1"
   }
 }

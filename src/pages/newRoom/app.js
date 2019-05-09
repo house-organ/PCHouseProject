@@ -1,13 +1,14 @@
 /********************************
- * @file: about page 关于我们
- * @desc: react-redux about list
+ * @file: newRoom page 新房
+ * @desc: react-redux newRoom list
  *******************************/
 
 import React from "react";
+import { Carousel } from 'antd';
 import {connect} from "react-redux";
 import utils from 'src/utils'
 
-
+import Footer from "component/footer"
 import {
 	addTodo, 
 	toggleTodo,
@@ -17,7 +18,8 @@ import {
 	filtAction,
 	filterTodoh
 } from 'store/action/filtAction'
-
+import Header from "component/header";
+import "./index.scss"
 
 class App extends React.Component {
 	constructor(props){
@@ -27,9 +29,20 @@ class App extends React.Component {
 
 
 	render() {
+	
 		return (
 			<div>
-				{this.props.children}
+				<Header />
+				<div className="main todo column is-8">
+					newRoom
+					<Carousel autoplay>
+						<div><h3>1</h3></div>
+						<div><h3>2</h3></div>
+						<div><h3>3</h3></div>
+						<div><h3>4</h3></div>
+					</Carousel>
+				</div>
+				<Footer />
 			</div>
 		);
 	}

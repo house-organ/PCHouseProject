@@ -1,13 +1,13 @@
 /********************************
- * @file: about page 关于我们
- * @desc: react-redux about list
+ * @file: market seaViewRoom 海景房
+ * @desc: react-redux seaViewRoom list
  *******************************/
 
 import React from "react";
 import {connect} from "react-redux";
 import utils from 'src/utils'
 
-
+import Footer from "component/footer"
 import {
 	addTodo, 
 	toggleTodo,
@@ -17,7 +17,7 @@ import {
 	filtAction,
 	filterTodoh
 } from 'store/action/filtAction'
-
+import Header from "component/header";
 
 class App extends React.Component {
 	constructor(props){
@@ -27,9 +27,14 @@ class App extends React.Component {
 
 
 	render() {
+	
 		return (
 			<div>
-				{this.props.children}
+				<Header />
+				<div className="main todo column is-8">
+					seaViewRoom
+				</div>
+				<Footer />
 			</div>
 		);
 	}

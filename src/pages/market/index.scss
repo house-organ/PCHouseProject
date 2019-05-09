@@ -1,0 +1,9 @@
+@import "src/common.scss";
+.timeline-box .ant-timeline-item{
+  position: relative;
+}
+.item-time{
+  position: absolute;
+  left: -100px;
+  top: 0;
+}
