@@ -5,8 +5,8 @@
 
 import React from "react";
 import { Timeline } from 'antd';
-
-
+import Swiper from 'swiper'
+// import 'swiper/dist/css/swiper.css'
 
 import Header from "component/header";
 import Footer from "component/footer"
@@ -25,20 +25,53 @@ export default class App extends React.Component {
 		list:'22'
 	}
 
-	constructor(props){
+	constructor(props) {
 		super(props);
 		// this.state={}
-
+		super();
+		this.state = {
+			index: 0
+		}
 	}
 	componentWillMount() {
 		// console.log("item",this.state.list)
 	}
 
+	componentDidMount(){
+		let galleryThumbs = new Swiper('.gallery-thumbs', {
+			spaceBetween: 10,
+			slidesPerView: 4,
+			// control: [galleryThumbs,galleryTop],
+			loop: true,
+			freeMode: true,
+			autoplay:true,
+			loopedSlides: 5, //looped slides should be the same
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true,
+		});
+		let galleryTop = new Swiper('.gallery-top', {
+			spaceBetween: 10,
+			loop:true,
+			loopedSlides: 5, //looped slides should be the same
+			autoplay:true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			thumbs: {
+				swiper: galleryThumbs,
+			},
+		});
+	}
+
 	render() {
+
+
+
 		return (
 			<div>
 				<Header />
-				<div className="main todo column is-8 timeline-box">
+				<div className="todo column is-8 timeline-box">
 					market
 					<Timeline>
 						{
@@ -47,6 +80,40 @@ export default class App extends React.Component {
 							})
 						}
 					</Timeline>
+					<div className="sw-box">
+						<div className="swiper-container gallery-top">
+							<div className="swiper-wrapper">
+								<div className="swiper-slide">1</div>
+								<div className="swiper-slide">2</div>
+								<div className="swiper-slide">3</div>
+								<div className="swiper-slide">4</div>
+								<div className="swiper-slide">5</div>
+								<div className="swiper-slide">6</div>
+								<div className="swiper-slide">7</div>
+								<div className="swiper-slide">8</div>
+								<div className="swiper-slide">9</div>
+								<div className="swiper-slide">0</div>
+							</div>
+							<div className="swiper-button-next swiper-button-white"></div>
+							<div className="swiper-button-prev swiper-button-white"></div>
+						</div>
+						<div className="swiper-container gallery-thumbs">
+							<div className="swiper-wrapper">
+								<div className="swiper-slide">1</div>
+								<div className="swiper-slide">2</div>
+								<div className="swiper-slide">3</div>
+								<div className="swiper-slide">4</div>
+								<div className="swiper-slide">5</div>
+								<div className="swiper-slide">6</div>
+								<div className="swiper-slide">7</div>
+								<div className="swiper-slide">8</div>
+								<div className="swiper-slide">9</div>
+								<div className="swiper-slide">0</div>
+							</div>
+						</div>
+					</div>
+
+
 				</div>
 				<Footer />
 			</div>
