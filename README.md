@@ -17,6 +17,14 @@ You will also see any lint errors in the console.
 可以在node_modules 文件夹下找到.bin目录
 然后找到webpack-dev-server.cmd 文件夹
 增加代码     --max_old_space_size=8192<br>
+### 
+    @IF EXIST "%~dp0\node.exe" (
+       "%~dp0\node.exe" --max_old_space_size=8192 "%~dp0\..\webpack-dev-server\bin\webpack-dev-server.js" %*
+     ) ELSE (
+       @SETLOCAL
+       @SET PATHEXT=%PATHEXT:;.JS;=;%
+       node --max_old_space_size=8192 "%~dp0\..\webpack-dev-server\bin\webpack-dev-server.js" %*
+     )`
   package.json中添加--max_old_space_size=8192<br>
   "scripts": {
     "dev": "webpack-dev-server  --mode development --devtool inline-source-map --hot",
