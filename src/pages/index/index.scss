@@ -1,11 +1,22 @@
 @import "src/common.scss";
-.column{
-  padding:0.75rem;
+
+.ant-card-head-wrapper{
+  display: inline-block;
 }
-p{
-  color:#333;
+.ant-card-head .ant-tabs{
+  display: inline-block;
+  margin-bottom: 0;
+  float: right;
 }
-pre{
-  margin-top:10px;
-  color:#666;
+.ant-tabs-nav-scroll{
+  text-align: right;
+}
+.ant-card-contain-tabs > .ant-card-head .ant-card-head-title{
+  padding: 16px 0;
+}
+.ant-tabs-bar{
+  margin: 0;
+}
+.ant-card-head .ant-tabs-bar{
+  border: none;
 }

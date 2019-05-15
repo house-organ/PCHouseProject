@@ -1,31 +1,47 @@
 
 import React, { Component } from "react";
+import { Row, Col ,Menu, Icon,Input } from 'antd';
 import "./index.scss";
 
 // import "./../antd/antd.scss"
 import logo from "src/pages/react-multi.png"
 
-
+const Search = Input.Search;
 
 export default class Nav extends Component {
+    state={
+        menuList:[
+            {id:'1',key:'index',name:'index'},
+            {id:'2',key:'newRoom',name:'newRoom'},
+            {id:'3',key:'seaViewRoom',name:'seaViewRoom'},
+            {id:'4',key:'villa',name:'villa'},
+            {id:'5',key:'market',name:'market'},
+        ]
+    }
+    handleClick=()=>{
 
+    }
     render() {
+        const menu = this.state.menuList.map(item=>{
+            return (<Menu.Item key={item.id}><a href={"/"+(item.key == 'index' ? ' ':item.key)}>{item.name}</a></Menu.Item>)
+        })
         return (
-            <div className="menu columns">
-                <div className="column is-2 logo"><img  src={logo} /></div>
-                <div className="columns column nav is-8">
-                    <div className="nav-item"><a href= "/">Home1111111111</a></div>
-
-                    <div className="nav-item"><a href= "/newRoom">newRoom</a></div>
-                    <div className="nav-item"><a href= "/seaViewRoom">seaViewRoom</a></div>
-                    <div className="nav-item"><a href= "/villa">villa</a></div>
-                    <div className="nav-item"><a href= "/market">market</a></div>
-                    <div className="nav-item"><a href= "/about">about</a></div>
-                    <div className="nav-item"><a href= "/todo">Todo</a></div>
-
-                    <div className="nav-item"><a href= "https://github.com/leinov/webpack-react-multi-page/">Github</a></div>
-                </div>
-                <div className="column is-2"></div>
+            <div className="header">
+                <Row type="flex" justify="start" className="header-box">
+                    <Col><img className="logo" src={logo} /></Col>
+                    <Col span={12}>
+                        <Menu onClick={this.handleClick} mode="horizontal" className="header-menu">
+                            {menu}
+                        </Menu>
+                    </Col>
+                    <Col>
+                        <Search
+                            placeholder="input search text"
+                            onSearch={value => console.log(value)}
+                        />
+                    </Col>
+                    <Col>123456789</Col>
+                </Row>
             </div>
         );
     }

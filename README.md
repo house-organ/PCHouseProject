@@ -13,6 +13,17 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
+//解决内存溢出导致启动打包失败方法<br>
+可以在node_modules 文件夹下找到.bin目录
+然后找到webpack-dev-server.cmd 文件夹
+增加代码     --max_old_space_size=8192<br>
+  package.json中添加--max_old_space_size=8192<br>
+  "scripts": {
+    "dev": "webpack-dev-server  --mode development --devtool inline-source-map --hot",
+    "build": "webpack --mode production",
+    "start": "node --max_old_space_size=8192 www.js"
+  },
+
 
 ### `yarn test`
 
