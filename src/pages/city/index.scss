@@ -1,0 +1,45 @@
+@import "src/common.scss";
+.header{
+  z-index: 999;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  .ant-menu{
+    background: initial;
+  }
+}
+.city-list-box{
+  position: relative;
+  margin-bottom: 20px;
+  .img{
+    height: 400px;
+    background-color: #3a8ee6;
+  }
+  .city-explain{
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: url("src/pages/city/images/city-line.png") no-repeat left center;
+  }
+
+
+}
+
+.carousel-box{
+
+  .carousel-img-box{
+    text-align: center;
+    height: 360px;
+    line-height: 360px;
+    background: #364d79;
+    overflow: hidden;
+  }
+
+  .carousel-img-box h3 {
+    color: #fff;
+  }
+}
