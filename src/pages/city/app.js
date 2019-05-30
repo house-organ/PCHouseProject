@@ -145,7 +145,7 @@ class App extends React.Component {
 			}
 		];
 		const cityList = this.state.cityData.map(item=>{
-			return (<div className="city-list-box" key={item.name}><div className="img"></div> <div className="city-explain">{item.name}</div></div>)
+			return (<div className="city-list-box" key={item.name}><div className="img"><img src={item.src} /></div> <div className="city-explain"><div className="city-explain-box"><span>{item.name}</span><div>{item.other}</div></div></div></div>)
 		})
 		const carouselList = this.state.banList.map((item,index)=>{
 			return (
@@ -165,9 +165,8 @@ class App extends React.Component {
 				</div>
 					<div className="main todo column is-8">
 
-						city
 
-						<div className="seach-box">
+						<div className="city-seach-box">
 							<Form layout="inline">
 								<FormItem
 									// id="control-mention"
@@ -180,6 +179,7 @@ class App extends React.Component {
 										initialValue: this.state.initValue,
 									})(
 										<Mention
+											style={{width:'900px',height:'80px',lineHeight:'70px'}}
 											defaultSuggestions={['afc163', 'benjycui', 'yiminghe', 'RaoHai', '中文', 'にほんご']}
 										/>,
 									)}
@@ -187,8 +187,7 @@ class App extends React.Component {
 								<FormItem
 									// wrapperCol={{ span: 14, offset: 6 }}
 								>
-									<Button type="primary" onClick={this.handleSubmit}>
-										Submit
+									<Button type="primary" className="seach-btn"  icon="search" onClick={this.handleSubmit}>
 									</Button>
 								</FormItem>
 							</Form>

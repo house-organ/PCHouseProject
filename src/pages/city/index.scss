@@ -6,13 +6,28 @@
   top: 0;
   width: 100%;
   border-bottom: 1px solid #ccc;
-  .ant-menu{
-    background: initial;
+  .header-menu{
+    color: #ffffff;
+    background: none;
+
   }
+  .ant-menu-horizontal > .ant-menu-item > a{
+    color: #ffffff;
+  }
+  .search-box{
+    display: none;
+  }
+  .tel-box{
+    color: #ffffff;
+  }
+}
+.ant-carousel .slick-slide {
+  height: 780px;
 }
 .city-list-box{
   position: relative;
   margin-bottom: 20px;
+  overflow: hidden;
   .img{
     height: 400px;
     background-color: #3a8ee6;
@@ -23,7 +38,24 @@
     height: 100%;
     top: 0;
     right: 0;
+    text-align: center;
     background: url("src/pages/city/images/city-line.png") no-repeat left center;
+    .city-explain-box{
+      vertical-align: middle;
+      padding-top: 108px;
+      span{
+        font-size: 60px;
+        color: #3b75ff;
+        line-height: 80px;
+        border-bottom: 5px solid #3b75ff;
+        padding: 10px 0;
+      }
+      div{
+        padding: 20px 0;
+        line-height: 60px;
+      }
+    }
+
   }
 
 
@@ -33,13 +65,40 @@
 
   .carousel-img-box{
     text-align: center;
-    height: 360px;
-    line-height: 360px;
-    background: #364d79;
+    height: 780px;
+    line-height: 780px;
     overflow: hidden;
   }
 
   .carousel-img-box h3 {
     color: #fff;
+  }
+  .ant-carousel .slick-dots-bottom {
+    bottom: 170px;
+  }
+  img{
+    display: block;
+    margin: 0 auto;
+  }
+}
+.city-seach-box{
+
+  height: 60px;
+  position: relative;
+  .ant-form{
+    display: block;
+    width: 1000px;
+    height: 80px;
+    position: absolute;
+    top: -145px;
+    left: 0;
+  }
+  .ant-form-inline .ant-form-item{
+    margin-right: 0;
+  }
+  .seach-btn{
+    height: 80px;
+    width: 100px;
+    font-size: 30px;
   }
 }

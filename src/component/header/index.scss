@@ -1,14 +1,29 @@
 .header{
   .logo{
-    width: auto;
-    height: 87px;
+    width: 136px;
+    height: 54px;
+    vertical-align: middle;
   }
   .header-box{
     width: 1000px;
     margin: 0 auto;
+    .logo-box{
+      line-height: 80px;
+    }
   }
   .header-menu{
     line-height: 87px;
     border: none;
+  }
+  .ant-menu-horizontal > .ant-menu-item > a{
+    font-size: 26px;
+  }
+  .tel-box{
+    vertical-align: middle;
+    line-height: 88px;
+    font-size: 30px;
+    img{
+      margin-right: 15px;
+    }
   }
 }
