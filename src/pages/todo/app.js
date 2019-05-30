@@ -7,11 +7,11 @@
 
 import React from "react";
 import {connect} from "react-redux";
-import utils from 'src/utils'
-import AddTodo from "component/todo/add-todo";
-import TodoList from "component/todo/todo-list";
-import Filter from "component/todo/filter";
-import Footer from "component/footer"
+// import utils from 'src/utils'
+// import AddTodo from "component/todo/add-todo";
+// import TodoList from "component/todo/todo-list";
+// import Filter from "component/todo/filter";
+// import Footer from "component/footer"
 
 import {
 	addTodo, 
@@ -22,7 +22,7 @@ import {
 	filtAction,
 	filterTodo
 } from 'store/action/filtAction'
-import Nav from "component/nav";
+// import Nav from "component/nav";
 
 class App extends React.Component {
 	state={
@@ -77,7 +77,7 @@ class App extends React.Component {
 	
 		return (
 			<div>
-				<Nav />
+				{/* <Nav />
 				<div className="main todo column is-8">
 					<h1 className="title"> {utils.getDate("-")} todo list</h1>
 					<AddTodo 
@@ -93,7 +93,7 @@ class App extends React.Component {
 						onFilterChange = {this.onFilterChange}
 					/>
 				</div>
-				<Footer />
+				<Footer /> */}
 			</div>
 		);
 	}

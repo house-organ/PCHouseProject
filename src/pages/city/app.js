@@ -56,6 +56,12 @@ class App extends React.Component {
 			{src:"src/pages/city/images/city-1.jpg",name:"广州",other:"据说这是魔都"},
 			{src:"src/pages/city/images/city-1.jpg",name:"深圳",other:"据说这是魔都"},
 		],
+		banList:[
+			{id:'1',src:'src/public/images/ban-1.jpg',title:'广告1'},
+			{id:'2',src:'src/public/images/ban-1.jpg',title:'广告1'},
+			{id:'3',src:'src/public/images/ban-1.jpg',title:'广告1'},
+			{id:'4',src:'src/public/images/ban-1.jpg',title:'广告1'},
+		],
 		initValue: toContentState('@afc163'),
 	};
 	constructor(props){
@@ -141,10 +147,10 @@ class App extends React.Component {
 		const cityList = this.state.cityData.map(item=>{
 			return (<div className="city-list-box" key={item.name}><div className="img"></div> <div className="city-explain">{item.name}</div></div>)
 		})
-		const carouselList = this.state.carouselData.map((item,index)=>{
+		const carouselList = this.state.banList.map((item,index)=>{
 			return (
-				<div className="carousel-img-box" key={index}>
-					<h3>{index+1}</h3>
+				<div className="carousel-img-box" key={item.id}>
+					<h3><img src={item.src} /></h3>
 				</div>
 			)
 		})

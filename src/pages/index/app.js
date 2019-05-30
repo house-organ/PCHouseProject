@@ -227,7 +227,7 @@ export default class App extends Component {
 						{comments.length > 0 && <CommentList comments={comments} />}
 					</Card>
 				</div>
-				<Footer />
+				<Footer></Footer>
 			</div>
 			
 		);
