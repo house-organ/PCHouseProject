@@ -1,29 +1,85 @@
 .header{
+
+  .header-top{
+    background-color: #437aff;
+  }
   .logo{
-    width: 136px;
-    height: 54px;
+    width: 100%;
+    height: auto;
     vertical-align: middle;
   }
   .header-box{
     width: 1000px;
     margin: 0 auto;
     .logo-box{
+      width: 100px;
       line-height: 80px;
     }
   }
-  .header-menu{
-    line-height: 87px;
-    border: none;
+  .header-menu-box{
+    width: 535px;
+    .header-menu{
+      line-height: 87px;
+      border: none;
+      background: inherit;
+      li.city-li{
+        padding-right: 5px;
+      }
+    }
+    i{
+      color: #ffffff;
+    }
+    .maen-icon{
+      margin-left: 10px;
+      margin-right: 0;
+    }
+    .ant-menu-horizontal > .ant-menu-item > a{
+      font-size: 20px;
+      color:#ffffff;
+      display: inline-block;
+      font-family: "Microsoft Yahei";
+
+    }
   }
-  .ant-menu-horizontal > .ant-menu-item > a{
-    font-size: 26px;
+
+  .search-box{
+    padding: 0 18px;
+    .ant-input-affix-wrapper{
+      margin: 23px 0;
+    }
+    .ant-input-affix-wrapper .ant-input {
+      height: 42px;
+      line-height: 42px;
+      border-radius: 42px;
+    }
   }
   .tel-box{
+    padding: 14px 0;
     vertical-align: middle;
-    line-height: 88px;
-    font-size: 30px;
-    img{
-      margin-right: 15px;
+    line-height: 30px;
+    color: #ffffff;
+    .tel-title-1{
+      font-size: 18px;
+      img{
+        height: 30px;
+        width: auto;
+        margin-right: 15px;
+      }
+    }
+    .tel-title-2{
+      font-size: 20px;
+    }
+
+  }
+
+
+  .breadcrumb{
+    border-bottom: 1px solid #999;
+    .breadcrumb-box{
+      width:1000px;
+      height: auto;
+      margin: 0 auto;
+      vertical-align: middle;
     }
   }
 }
